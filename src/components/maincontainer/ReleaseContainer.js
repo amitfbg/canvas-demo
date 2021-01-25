@@ -1,21 +1,20 @@
-import { Breadcrumbs } from "@material-ui/core";
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import { makeStyles } from "@material-ui/core";
+import BreadCrumb from "../breadCrumb/BreadCrumb";
+import PageHeader from "./components/PageHeader";
+
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+  },
+});
 
 function ReleaseContainer() {
+  const classes = useStyles();
   return (
-    <div>
-      <div>
-        <Breadcrumbs
-          separator={<NavigateNextIcon fontSize="small" />}
-          aria-label="breadcrumb"
-        >
-          <Link color="inherit">Overview</Link>
-          <Typography color="textPrimary">Release</Typography>
-        </Breadcrumbs>
-      </div>
+    <div className={classes.root}>
+      <BreadCrumb />
+      <PageHeader />
     </div>
   );
 }
