@@ -1,5 +1,7 @@
 // import './App.css';
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, ThemeProvider } from "@material-ui/core";
+import theme from "./theme/MUI_theme";
+
 import Header from "./components/header/Header";
 import ReleaseContainer from "./components/maincontainer/ReleaseContainer";
 import LeftNavBar from "./components/navbar/Navigator";
@@ -14,11 +16,13 @@ function App() {
   const classes = useStyle();
   return (
     <>
-      <Header />
-      <div className={classes.wrapper}>
-        <LeftNavBar />
-        <ReleaseContainer />
-      </div>
+      <ThemeProvider theme={theme}>
+        <Header />
+        <div className={classes.wrapper}>
+          <LeftNavBar />
+          <ReleaseContainer />
+        </div>
+      </ThemeProvider>
     </>
   );
 }
