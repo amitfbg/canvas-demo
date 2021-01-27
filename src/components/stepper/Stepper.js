@@ -18,7 +18,9 @@ function getSteps() {
   return ["Plan", "Monitor", "Intake"];
 }
 const ColorlibConnector = withStyles({
-  root: {},
+  root: {
+
+  },
   active: {
     "& $line": {
       backgroundImage:

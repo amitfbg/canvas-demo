@@ -14,7 +14,6 @@ const theme = createMuiTheme({
   overrides: {
     MuiStepIcon: {
       root: {
-        color: "#fff",
         width: 25,
         height: 25,
         borderRadius: "50%",

@@ -7,7 +7,7 @@ import {
   Toolbar,
   ListItemIcon,
   ListItemText,
-  makeStyles, 
+  makeStyles,
 } from "@material-ui/core";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
@@ -20,21 +20,20 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: 60,
-    transition: theme.transitions.create('width', {
+    overflowX: "hidden",
+    transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    overflowX:"hidden",
-    "&:hover":{
+    "&:hover": {
       width: drawerWidth,
-      transition:theme.transitions.create('width',{
+      transition: theme.transitions.create("width", {
         easing: theme.transitions.easing.sharp,
-        duration:theme.transitions.duration.enteringScreen
-      })
-    }
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+    },
   },
 }));
-
 
 function LeftNavBar() {
   const classes = useStyles();
@@ -49,7 +48,6 @@ function LeftNavBar() {
       >
         <Toolbar />
         <div className={classes.drawerContainer}>
-        
           <List>
             {["Intake", "Planning", "Launch", "Measure"].map((text, index) => (
               <ListItem button key={text}>
