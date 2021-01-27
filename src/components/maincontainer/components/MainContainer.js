@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     marginLeft: theme.spacing(3),
     marginBottom: theme.spacing(3),
+    marginTop: theme.spacing(3),
   },
   paper: {
     // flexGrow: 1,
@@ -31,41 +32,41 @@ export default function MainContainer() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid container item spacing={3}>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Total Projects/MBs</Paper>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Impacted Apps</Paper>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Pre-deployments</Paper>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Total Outages</Paper>
           </Grid>
         </Grid>
         <Grid container item spacing={3}>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Project</Paper>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Dependency</Paper>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Paper className={classes.paper}>Calender</Paper>
           </Grid>
         </Grid>
         <Grid container item spacing={3}>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Workback</Paper>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Leadership</Paper>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Release</Paper>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={6} lg={3}>
             <Paper className={classes.paper}>Testing</Paper>
           </Grid>
         </Grid>
