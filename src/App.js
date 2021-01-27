@@ -4,7 +4,7 @@ import theme from "./theme/MUI_theme";
 
 import Header from "./components/header/Header";
 import ReleaseContainer from "./components/maincontainer/ReleaseContainer";
-import LeftNavBar from "./components/navbar/Navigator";
+import LeftNavBar from "./components/navbar/LeftNavBar";
 
 const useStyle = makeStyles({
   wrapper: {
