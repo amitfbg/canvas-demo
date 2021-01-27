@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import BreadCrumb from "../breadCrumb/BreadCrumb";
 import PageHeader from "./components/PageHeader";
+import Stepper from "../stepper/Stepper";
 
 const useStyles = makeStyles({
   root: {
@@ -15,6 +16,7 @@ function ReleaseContainer() {
     <div className={classes.root}>
       <BreadCrumb />
       <PageHeader />
+      <Stepper/>
     </div>
   );
 }

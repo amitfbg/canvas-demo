@@ -17,7 +17,6 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   drawer: {
     width: 65,
-    overflowX:"hidden"
   },
   drawerPaper: {
     width: 60,
@@ -25,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    overflowX:"hidden",
     "&:hover":{
       width: drawerWidth,
       transition:theme.transitions.create('width',{
