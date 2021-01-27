@@ -22,13 +22,11 @@ const theme = createMuiTheme({
         alignItems: "center",
       },
       active: {
-        backgroundImage:
-          "linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)",
+        color:"#e20074",
         boxShadow: "0 4px 10px 0 rgba(0,0,0,.25)",
       },
       completed: {
-        backgroundColor: "rgb(242,113,33)",
-        color: "rgb(242,113,33)",
+        backgroundColor: "#e20074",
       },
     },
   },
