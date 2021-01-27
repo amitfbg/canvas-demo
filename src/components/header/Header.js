@@ -9,21 +9,20 @@ import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#31394d",
-    zIndex:theme.zIndex.drawer+1
   },
   accountButton: {
     marginLeft: "auto",
   },
 }));
+
 function Header() {
   const classes = useStyles();
   return (
     <>
-      <AppBar position="sticky" className={classes.root}>
+      <AppBar position="static" className={classes.root}>
         <Toolbar>
           <IconButton
             edge="start"
