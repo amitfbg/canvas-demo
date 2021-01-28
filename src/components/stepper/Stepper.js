@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  makeStyles,
-  withStyles,
-  StepConnector,
-} from "@material-ui/core";
+import { makeStyles, withStyles, StepConnector } from "@material-ui/core";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
@@ -11,6 +7,7 @@ import StepLabel from "@material-ui/core/StepLabel";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    backgroundColor: "#fafafa",
   },
 }));
 
@@ -18,19 +15,15 @@ function getSteps() {
   return ["Plan", "Monitor", "Intake"];
 }
 const ColorlibConnector = withStyles({
-  root: {
-
-  },
+  root: {},
   active: {
     "& $line": {
-      backgroundColor:
-        "#e20074",
+      backgroundColor: "#e20074",
     },
   },
   completed: {
     "& $line": {
-      backgroundColor:
-        "#e20074",
+      backgroundColor: "#e20074",
     },
   },
   line: {

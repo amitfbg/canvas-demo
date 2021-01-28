@@ -9,23 +9,21 @@ import React from "react";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { ReactComponent as Logo } from "../../assets/logo-canvas.svg";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#31394d",
-    zIndex:theme.zIndex.drawer+1,
+    zIndex: theme.zIndex.drawer + 1,
   },
   accountButton: {
     marginLeft: "auto",
   },
-  toolBar:{
-    minHeight:48,
-    paddingLeft:24
+  toolBar: {
+    minHeight: 48,
+    // paddingLeft: 24,
   },
-  heading:{
-    paddingLeft:18
-
-  }
+  heading: {
+    paddingLeft: 34,
+  },
 }));
 function Header() {
   const classes = useStyles();
@@ -37,11 +35,13 @@ function Header() {
             edge="start"
             // className={classes.menuButton}
             color="inherit"
-            aria-label="menu"
+            aria-label="logo"
           >
-            <Logo/>
+            <Logo />
           </IconButton>
-          <Typography variant="h6" className={classes.heading} >UN-RELEASED</Typography>
+          <Typography variant="h6" className={classes.heading}>
+            UN-RELEASED
+          </Typography>
           <IconButton
             className={classes.accountButton}
             color="inherit"

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     width: 60,
   },
   drawerPaper: {
-    width: 60,
+    width: 65,
     overflowX: "hidden",
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
