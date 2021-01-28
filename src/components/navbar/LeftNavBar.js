@@ -16,7 +16,7 @@ const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
-    width: 65,
+    width: 60,
   },
   drawerPaper: {
     width: 60,
