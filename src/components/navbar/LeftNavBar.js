@@ -17,10 +17,10 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   drawer: {
     width: 65,
-    overflowX: "hidden",
   },
   drawerPaper: {
-    width: 65,
+    width: 60,
+    overflowX: "hidden",
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
