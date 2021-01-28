@@ -6,7 +6,7 @@ import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 const useStyles = makeStyles({
   breadCrumb: {
     padding: "0.5rem 0 0.5rem 2rem",
-    // color: "#80868b",
+    backgroundColor: "#ffffff",
   },
 });
 
