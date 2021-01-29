@@ -40,11 +40,7 @@ export default function MyStepper() {
 
   return (
     <div className={classes.root}>
-      <Stepper
-        activeStep={2}
-        alternativeLabel
-        connector={<ColorlibConnector />}
-      >
+      <Stepper activeStep={2} connector={<ColorlibConnector />}>
         <hr />
         {steps.map((label) => (
           <Step key={label}>

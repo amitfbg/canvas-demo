@@ -30,8 +30,9 @@
 .steps {
   position: absolute;
   display: flex;
-  width: 20%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 .Step-icon {
   width: 12px;
@@ -39,6 +40,7 @@
   border: solid 1px lightgrey;
   background-color: lightgrey;
   border-radius: 80%;
+  cursor: pointer;
   z-index: 1;
 }
 .Step-label {

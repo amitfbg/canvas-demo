@@ -31,11 +31,7 @@ const useStyles = makeStyles((theme) => ({
     <>
       <AppBar position="sticky" className={classes.root}>
         <Toolbar className={classes.toolBar}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="logo"
-          >
+          <IconButton edge="start" color="inherit" aria-label="logo">
             <Logo />
           </IconButton>
           <Typography variant="h6" className={classes.heading}>
