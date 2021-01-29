@@ -1,4 +1,9 @@
-// import './App.css';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 import { makeStyles, ThemeProvider } from "@material-ui/core";
 import theme from "./theme/MUI_theme";
 import Header from "./components/header/Header";
@@ -16,11 +21,20 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Header />
-        <div className={classes.wrapper}>
-          <LeftNavBar />
-          <ReleaseContainer />
-        </div>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Redirect to="/overview/release" />
+            </Route>
+            <Route path="*">
+              <div className={classes.wrapper}>
+                <LeftNavBar />
+                <ReleaseContainer />
+              </div>
+            </Route>
+          </Switch>
+        </Router>
       </ThemeProvider>
     </>
   );

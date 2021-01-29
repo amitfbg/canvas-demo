@@ -4,9 +4,11 @@ import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    position: "relative",
-    top: 0,
-    left: "30%",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+
     display: "flex",
     flexWrap: "wrap",
     backgroundColor: "#fff",
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    // width: 200,
+    width: "140px",
   },
 }));
 

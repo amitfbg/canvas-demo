@@ -12,14 +12,22 @@ const useStyles = makeStyles({
 
 function BreadCrumb() {
   const classes = useStyles();
+  let finalpathList = window.location.pathname.split("/").filter((path) => {
+    return path !== "";
+  });
   return (
     <div className={classes.breadCrumb}>
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
         aria-label="breadcrumb"
       >
-        <Typography color="textPrimary">Overview</Typography>
-        <Typography color="textSecondary">Release</Typography>
+        {finalpathList.map((path, index) => {
+          return path !== "" && index !== finalpathList.length - 1 ? (
+            <Typography color="textPrimary">{path}</Typography>
+          ) : (
+            <Typography color="error">{path}</Typography>
+          );
+        })}
       </Breadcrumbs>
     </div>
   );

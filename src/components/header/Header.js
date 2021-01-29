@@ -31,16 +31,11 @@ function Header() {
     <>
       <AppBar position="sticky" className={classes.root}>
         <Toolbar className={classes.toolBar}>
-          <IconButton
-            edge="start"
-            // className={classes.menuButton}
-            color="inherit"
-            aria-label="logo"
-          >
+          <IconButton edge="start" color="inherit" aria-label="logo">
             <Logo />
           </IconButton>
           <Typography variant="h6" className={classes.heading}>
-            UN-RELEASED
+            UN-RELEASE
           </Typography>
           <IconButton
             className={classes.accountButton}
@@ -49,7 +44,6 @@ function Header() {
           >
             <AccountCircleIcon fontSize="large" />
           </IconButton>
-          {/* <Button color="inherit">Login</Button> */}
         </Toolbar>
       </AppBar>
     </>

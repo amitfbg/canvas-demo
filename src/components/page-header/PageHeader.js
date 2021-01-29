@@ -10,6 +10,7 @@ const Wrapper = styled.section`
   align-items: center;
   padding: 2rem 0 2rem 2rem;
   background-color: #fafafa;
+  position: relative;
 `;
 
 const useStyle = makeStyles((theme) => ({
