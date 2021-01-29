@@ -1,9 +1,9 @@
 import React from "react";
-import RocketIcon from "../../../assets/RocketIcon";
+import RocketIcon from "../../assets/RocketIcon";
 import Typography from "@material-ui/core/Typography";
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core";
-import DatePicker from "../../date-picker/DatePicker";
+import DatePicker from "../date-picker/DatePicker";
 
 const Wrapper = styled.section`
   display: flex;
