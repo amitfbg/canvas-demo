@@ -20,12 +20,7 @@ const ReleaseContainer = () => {
     <div className={classes.root}>
       <BreadCrumb />
       <PageHeader />
-<<<<<<< HEAD
-      <CustomStepper />
-      {/* <Stepper /> */}
-=======
       <CustomStepper arr={arr}/>
->>>>>>> 871bc8e56f007d6756f1e45eea19210f569d176f
       <MainContainer />
     </div>
   );
