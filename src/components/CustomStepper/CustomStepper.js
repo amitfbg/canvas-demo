@@ -20,11 +20,6 @@ const CustomStepper = ({arr}) => {
       <div className="steps">
         {items.map((step, key) => (
           <div key={key} className="Stepper-wrapper">
-<<<<<<< HEAD
-            <div className="Step-icon" onClick={() => stepChange(step)}></div>
-            <div className="Step-label">{step}</div>
-            {key !== items.length - 1 ? <hr className="Step-connector" /> : ""}
-=======
             <div
               className={
                 "Step-icon" +
@@ -51,7 +46,6 @@ const CustomStepper = ({arr}) => {
             ) : 
               ""
             }
->>>>>>> 871bc8e56f007d6756f1e45eea19210f569d176f
           </div>
         ))}
       </div>
