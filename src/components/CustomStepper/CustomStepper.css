@@ -5,6 +5,8 @@
 }
 .Stepper-wrapper {
   width: 5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,8 +24,7 @@
   position: absolute;
   left: 50%;
   height: 1px;
-  border: 1px solid lightgrey;
-  background-color: lightgrey;
+  border: solid 1px lightgrey;
   margin-top: 0.3rem;
   width: 50%;
 }
@@ -43,41 +44,43 @@
   cursor: pointer;
   z-index: 1;
 }
-.active-step-icon {
+.Step-iconactive {
   width: 12px;
+  z-index: 1;
   height: 12px;
   border: solid 1px #e20074;
   background-color: #e20074;
   border-radius: 80%;
   cursor: pointer;
-  z-index: 1;
 }
 .Step-label {
   margin-top: 0.25rem;
   margin-left: 0.5rem;
+  cursor: pointer;
 }
 
-.active-step-labe {
+.Step-labelactive {
   margin-top: 0.25rem;
   margin-left: 0.5rem;
   font-weight: bold;
   color: #e20074;
+  cursor: pointer;
 }
 
 .Step-connector {
-  border: 1px solid lightgrey;
+  border: .5px solid lightgrey;
   position: absolute;
   top: 14%;
-  left: 60%;
-  width: 100%;
+  left: 55%;
+  width: 147%;
   background-color: lightgrey;
 }
 
-.active-step-connector {
-  border: 1px solid #e20074;
+.Step-connectoractive {
+  border: .5px solid #e20074;
   position: absolute;
   top: 14%;
-  left: 60%;
-  width: 100%;
+  left: 55%;
+  width: 147%;
   background-color: #e20074;
 }
