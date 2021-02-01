@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Drawer,
   ListItem,
@@ -8,9 +8,12 @@ import {
   ListItemIcon,
   ListItemText,
   makeStyles,
+  Collapse,
 } from "@material-ui/core";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import EventIcon from "@material-ui/icons/Event";
+import { ExpandLess, ExpandMore, StarBorder } from "@material-ui/icons";
 
 const drawerWidth = 240;
 
@@ -33,10 +36,22 @@ const useStyles = makeStyles((theme) => ({
       }),
     },
   },
+  nested: {
+    marginLeft: theme.spacing(4),
+  },
 }));
 
 function LeftNavBar() {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleClick = (e) => {
+    e === 1 && setOpen(!open);
+  };
+
   return (
     <div>
       <Drawer
@@ -50,14 +65,30 @@ function LeftNavBar() {
         <div className={classes.drawerContainer}>
           <List>
             {["Intake", "Planning", "Launch", "Measure"].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
+              <>
+                <ListItem button onClick={() => handleClick(index)} key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                  {index === 1 && open ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                {index === 1 && (
+                  <Collapse in={open} timeout="auto" unmountOnExit>
+                    <List component="div">
+                      <ListItem button className={classes.nested}>
+                        <ListItemIcon>
+                          <StarBorder />
+                        </ListItemIcon>
+                        <ListItemText primary="Starred" />
+                      </ListItem>
+                    </List>
+                  </Collapse>
+                )}
+              </>
             ))}
           </List>
+
           <Divider />
         </div>
       </Drawer>
