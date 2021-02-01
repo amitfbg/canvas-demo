@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 34,
   },
 }));
-function Header() {
+ const Header=()=> {
   const classes = useStyles();
   return (
     <>

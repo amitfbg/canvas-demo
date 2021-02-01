@@ -4,6 +4,7 @@ import BreadCrumb from "../breadCrumb/BreadCrumb";
 import PageHeader from "../page-header/PageHeader";
 import Stepper from "../stepper/Stepper";
 import MainContainer from "../maincontainer/MainContainer";
+import  CustomStepper  from "../CustomStepper/CustomStepper";
 
 const useStyles = makeStyles({
   root: {
@@ -19,7 +20,8 @@ function ReleaseContainer() {
     <div className={classes.root}>
       <BreadCrumb />
       <PageHeader />
-      <Stepper />
+      <CustomStepper/>
+      {/* <Stepper/> */}
       <MainContainer />
     </div>
   );
