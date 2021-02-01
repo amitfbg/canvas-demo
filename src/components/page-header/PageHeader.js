@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-function PageHeader() {
+const PageHeader = () => {
   const classes = useStyle();
   return (
     <Wrapper>
@@ -32,6 +32,6 @@ function PageHeader() {
       <DatePicker />
     </Wrapper>
   );
-}
+};
 
 export default PageHeader;

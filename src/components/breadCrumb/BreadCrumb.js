@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   },
 });
 
-function BreadCrumb() {
+const BreadCrumb = () => {
   const classes = useStyles();
   let finalpathList = window.location.pathname.split("/").filter((path) => {
     return path !== "";
@@ -23,14 +23,18 @@ function BreadCrumb() {
       >
         {finalpathList.map((path, index) => {
           return path !== "" && index !== finalpathList.length - 1 ? (
-            <Typography color="textPrimary">{path}</Typography>
+            <Typography key={index} color="textPrimary">
+              {path.toUpperCase()}
+            </Typography>
           ) : (
-            <Typography color="error">{path}</Typography>
+            <Typography key={index} color="error">
+              {path.toUpperCase()}
+            </Typography>
           );
         })}
       </Breadcrumbs>
     </div>
   );
-}
+};
 
 export default BreadCrumb;

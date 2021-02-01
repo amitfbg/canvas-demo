@@ -34,7 +34,7 @@ const ColorlibConnector = withStyles({
   },
 })(StepConnector);
 
-export default function MyStepper() {
+const MyStepper = () => {
   const classes = useStyles();
   const steps = getSteps();
 
@@ -50,4 +50,6 @@ export default function MyStepper() {
       </Stepper>
     </div>
   );
-}
+};
+
+export default MyStepper;

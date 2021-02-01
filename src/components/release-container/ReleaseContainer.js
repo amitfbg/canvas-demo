@@ -4,7 +4,7 @@ import BreadCrumb from "../breadCrumb/BreadCrumb";
 import PageHeader from "../page-header/PageHeader";
 import Stepper from "../stepper/Stepper";
 import MainContainer from "../maincontainer/MainContainer";
-import  CustomStepper  from "../CustomStepper/CustomStepper";
+import CustomStepper from "../CustomStepper/CustomStepper";
 
 const useStyles = makeStyles({
   root: {
@@ -14,17 +14,17 @@ const useStyles = makeStyles({
   },
 });
 
-function ReleaseContainer() {
+const ReleaseContainer = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <BreadCrumb />
       <PageHeader />
-      <CustomStepper/>
-      {/* <Stepper/> */}
+      <CustomStepper />
+      {/* <Stepper /> */}
       <MainContainer />
     </div>
   );
-}
+};
 
 export default ReleaseContainer;

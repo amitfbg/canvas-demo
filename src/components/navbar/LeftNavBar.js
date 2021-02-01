@@ -12,7 +12,6 @@ import {
 } from "@material-ui/core";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
-import EventIcon from "@material-ui/icons/Event";
 import { ExpandLess, ExpandMore, StarBorder } from "@material-ui/icons";
 
 const drawerWidth = 240;
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function LeftNavBar() {
+const LeftNavBar = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const handleClose = () => {
@@ -73,6 +72,7 @@ function LeftNavBar() {
                   <ListItemText primary={text} />
                   {index === 1 && open ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
+                {/* On Click menu item of Planning tab */}
                 {index === 1 && (
                   <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div">
@@ -94,6 +94,6 @@ function LeftNavBar() {
       </Drawer>
     </div>
   );
-}
+};
 
 export default LeftNavBar;

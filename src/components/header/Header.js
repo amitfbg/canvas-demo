@@ -1,3 +1,4 @@
+import React from "react";
 import {
   AppBar,
   IconButton,
@@ -5,7 +6,6 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import React from "react";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { ReactComponent as Logo } from "../../assets/logo-canvas.svg";
 
@@ -19,13 +19,12 @@ const useStyles = makeStyles((theme) => ({
   },
   toolBar: {
     minHeight: 48,
-    // paddingLeft: 24,
   },
   heading: {
     paddingLeft: 34,
   },
 }));
- const Header=()=> {
+const Header = () => {
   const classes = useStyles();
   return (
     <>
@@ -48,5 +47,5 @@ const useStyles = makeStyles((theme) => ({
       </AppBar>
     </>
   );
-}
+};
 export default Header;

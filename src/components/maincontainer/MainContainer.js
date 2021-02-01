@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { MediumGrid, SmallGrid } from "../grid/GridTypes";
 
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MainContainer() {
+const MainContainer = () => {
   const classes = useStyles();
 
   return (
@@ -44,4 +43,6 @@ export default function MainContainer() {
       </Grid>
     </div>
   );
-}
+};
+
+export default MainContainer;

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DatePicker() {
+const DatePicker = () => {
   const classes = useStyles();
 
   return (
@@ -30,9 +30,8 @@ export default function DatePicker() {
       <TextField
         id="date"
         variant="standard"
-        // label="Birthday"
         type="date"
-        defaultValue="2021-01-27"
+        defaultValue="2021-02-01"
         className={classes.textField}
         InputLabelProps={{
           shrink: true,
@@ -40,4 +39,6 @@ export default function DatePicker() {
       />
     </div>
   );
-}
+};
+
+export default DatePicker;
