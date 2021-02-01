@@ -15,17 +15,12 @@ const useStyles = makeStyles({
 
 const ReleaseContainer = () => {
   const classes = useStyles();
-  const arr = ["PLAN", "INTAKE" ,"MONITOR"];
+  const arr = ["PLAN", "INTAKE", "MONITOR"];
   return (
     <div className={classes.root}>
       <BreadCrumb />
       <PageHeader />
-<<<<<<< HEAD
-      <CustomStepper />
-      {/* <Stepper /> */}
-=======
-      <CustomStepper arr={arr}/>
->>>>>>> 871bc8e56f007d6756f1e45eea19210f569d176f
+      <CustomStepper arr={arr} />
       <MainContainer />
     </div>
   );
