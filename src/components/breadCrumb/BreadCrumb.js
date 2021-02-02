@@ -7,6 +7,7 @@ const useStyles = makeStyles({
   breadCrumb: {
     padding: "0.5rem 0 0.5rem 2rem",
     backgroundColor: "#ffffff",
+    fontWeight: "bold",
   },
 });
 
@@ -22,14 +23,18 @@ const BreadCrumb = () => {
         aria-label="breadcrumb"
       >
         {finalpathList.map((path, index) => {
-          return path !== "" && index !== finalpathList.length - 1 ? (
-            <Typography key={index} color="textPrimary">
-              {path.toUpperCase()}
-            </Typography>
-          ) : (
-            <Typography key={index} color="error">
-              {path.toUpperCase()}
-            </Typography>
+          return (
+            path !== "" &&
+            index < 2 &&
+            (index !== 1 ? (
+              <Typography key={index} color="textPrimary">
+                {path.toUpperCase()}
+              </Typography>
+            ) : (
+              <Typography key={index} color="error">
+                {path.toUpperCase()}
+              </Typography>
+            ))
           );
         })}
       </Breadcrumbs>

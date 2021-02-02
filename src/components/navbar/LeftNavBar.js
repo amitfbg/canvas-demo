@@ -43,9 +43,6 @@ const useStyles = makeStyles((theme) => ({
 const LeftNavBar = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const handleClick = (e) => {
     e === 1 && setOpen(!open);
@@ -64,8 +61,8 @@ const LeftNavBar = () => {
         <div className={classes.drawerContainer}>
           <List>
             {["Intake", "Planning", "Launch", "Measure"].map((text, index) => (
-              <>
-                <ListItem button onClick={() => handleClick(index)} key={text}>
+              <div key={index}>
+                <ListItem button onClick={() => handleClick(index)}>
                   <ListItemIcon>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                   </ListItemIcon>
@@ -85,7 +82,7 @@ const LeftNavBar = () => {
                     </List>
                   </Collapse>
                 )}
-              </>
+              </div>
             ))}
           </List>
 
