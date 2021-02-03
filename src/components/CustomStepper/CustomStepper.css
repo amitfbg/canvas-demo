@@ -44,7 +44,7 @@
   cursor: pointer;
   z-index: 1;
 }
-.Step-iconactive {
+.Step-icon.active {
   width: 12px;
   z-index: 1;
   height: 12px;
@@ -59,7 +59,7 @@
   cursor: pointer;
 }
 
-.Step-labelactive {
+.Step-label.active {
   margin-top: 0.25rem;
   margin-left: 0.5rem;
   font-weight: bold;
@@ -76,7 +76,7 @@
   background-color: lightgrey;
 }
 
-.Step-connectoractive {
+.Step-connector.active {
   border: .5px solid #e20074;
   position: absolute;
   top: 14%;

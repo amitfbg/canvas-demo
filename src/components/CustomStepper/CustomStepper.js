@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import "./CustomStepper.css";
 import { useHistory } from "react-router-dom";
 
-const CustomStepper = ({arr}) => {
+const CustomStepper = ({ arr }) => {
   const history = useHistory();
 
   const items = arr;
   const [currentStep, setStep] = useState(0);
-  history.push(`/overview/unrelease/${(items[currentStep]).toLowerCase()}`);
+  history.push(`/overview/unrelease/${items[currentStep].toLowerCase()}`);
   const stepChange = (index) => {
     setStep(index);
-    history.push(`/overview/unrelease/${(items[index]).toLowerCase()}`);
+    history.push(`/overview/unrelease/${items[index].toLowerCase()}`);
   };
 
   return (
@@ -21,27 +21,24 @@ const CustomStepper = ({arr}) => {
         {items.map((step, key) => (
           <div key={key} className="Stepper-wrapper">
             <div
-              className={
-                "Step-icon" +
-                (currentStep >= items.indexOf(step) ? "active" : "")
-              }
+              className={`Step-icon ${
+                currentStep >= items.indexOf(step) ? "active" : ""
+              }`}
               onClick={() => stepChange(items.indexOf(step))}
             ></div>
             <div
-              className={
-                "Step-label" +
-                (currentStep >= items.indexOf(step) ? "active" : "")
-              }
+              className={`Step-label ${
+                currentStep >= items.indexOf(step) ? "active" : ""
+              }`}
               onClick={() => stepChange(items.indexOf(step))}
             >
               {step}
             </div>
-            {key !== items.length - 1 ? (
+            { key !== items.length - 1 ? (
               <hr
-                className={
-                  "Step-connector" +
-                  (currentStep >items.indexOf(step) ? "active" : "")
-                }
+                className={`Step-connector ${
+                  currentStep > items.indexOf(step) ? "active" : ""
+                }`}
               />
             ) : 
               ""
@@ -49,7 +46,6 @@ const CustomStepper = ({arr}) => {
           </div>
         ))}
       </div>
-      
     </div>
   );
 };
