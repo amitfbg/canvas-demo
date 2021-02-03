@@ -40,9 +40,9 @@ const CustomStepper = ({ arr }) => {
                   currentStep > items.indexOf(step) ? "active" : ""
                 }`}
               />
-            ) : 
+            ) : (
               ""
-            }
+            )}
           </div>
         ))}
       </div>
