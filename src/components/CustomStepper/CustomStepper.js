@@ -21,10 +21,9 @@ const CustomStepper = ({ arr }) => {
         {items.map((step, key) => (
           <div key={key} className="Stepper-wrapper">
             <div
-              className={
-                "Step-icon" +
-                (currentStep >= items.indexOf(step) ? "active" : "")
-              }
+              className={`Step-icon${
+                currentStep >= items.indexOf(step) ? "active" : ""
+              }`}
               onClick={() => stepChange(items.indexOf(step))}
             ></div>
             <div
