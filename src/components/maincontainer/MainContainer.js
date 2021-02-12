@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { MediumGrid, SmallGrid } from "../grid/GridTypes";
+import ProgressBar from "../progress-bar/ProgressBar";
+import ColumnGraph from "../column-graph/ColumnGraph";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,8 +32,16 @@ const MainContainer = () => {
           <SmallGrid name="Total Outages" height="6rem" />
         </Grid>
         <Grid container item spacing={3}>
-          <SmallGrid name="Projec" height="17rem" />
-          <SmallGrid name="Dependency" height="17rem" />
+          <SmallGrid
+            name="Project"
+            height="17rem"
+            component={<ProgressBar />}
+          ></SmallGrid>
+          <SmallGrid
+            name="Dependency"
+            height="17rem"
+            component={<ColumnGraph />}
+          />
           <MediumGrid name="Calender" height="17rem" />
         </Grid>
         <Grid container item spacing={3}>

@@ -16,7 +16,10 @@ export const SmallGrid = (props) => {
   const classes = useStyles(props);
   return (
     <Grid item xs={12} sm={6} lg={3}>
-      <Paper className={classes.paper}>{props.name}</Paper>
+      <Paper className={classes.paper}>
+        {props.name}
+        {props.component}
+      </Paper>
     </Grid>
   );
 };
