@@ -28,7 +28,7 @@ const ScaleYItems = styled.li`
 const ScaleX = styled.ul`
   display: flex;
   width: 100%;
-  background: #ccc;
+  background: transparent;
   border-radius: 5px;
   font-size: 10px;
   font-weight: bold;
@@ -50,7 +50,7 @@ const ScaleXItemsBar = styled.div`
   width: 40px;
   margin-left: 10px;
   text-align: center;
-  animation: ${Fill} 3s ease-in-out forwards;
+  animation: ${Fill} 1s ease-in-out forwards;
 `;
 
 const BarGraph = () => {
